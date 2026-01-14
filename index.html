@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Changa+One:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sekuya&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(26, 25, 25);
+            margin-top: 85px;
+        }
+        nav{
+            background: linear-gradient(90deg, rgb(8, 255, 8),  greenyellow);
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        .image-1{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            margin-top: -15px;
+        }
+        .home{
+            height: 30px;
+            width: 70px;
+            background-color: rgb(8, 255, 8);
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: "Caveat", cursive;
+        }
+        .left{
+            margin-top: 15px;
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+            
+            margin-right: 30px;
+            margin-top: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .charles{
+            font-family: "Lilita One", sans-serif;
+            color: black;
+            margin-left: 15px;
+        }
+        .about{
+            display: flex;
+            justify-content: start;
+            font-size: 30px;
+            margin-top: 60px;
+            color: rgb(8, 255, 8);
+            font-family: "Dancing Script", cursive;
+        }
+        .my-image{
+            
+          height: 100%;
+          width: 100%; 
+          object-fit: contain;
+          object-position: bottom; 
+        }
+        .imaging{
+            border: none;
+            border-color: rgb(8,255, 8);
+            border-radius: 250px;
+            background-color: rgb(40, 40, 40);
+            height: 500px;
+            width: 500px;
+            margin-left: 200px;
+            margin-top: 70px;
+            overflow: hidden;
+
+        }
+        .hello{
+            color: rgb(8, 255, 8);
+            font-size: 20px;
+            margin-bottom: -30px;
+        }
+        .web{
+            font-family: "Sekuya", system-ui;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 50px;
+            color: white;
+        }
+        .all-about{
+            display: flex;
+            
+            background-color: black;
+            height: 700px;
+        }
+        .all-about-me{
+            margin-top: 100px;
+            margin-left: 50px;
+        }
+        .name{
+            
+        }
+        .full-stack{
+            font-size: 30px;
+            color: white;
+            font-family: "Zilla Slab", serif;
+        }
+        .my-portfolio{
+            
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .project{
+            font-size: 55px;
+            font-family: "Sekuya", system-ui;
+            margin-left: 50px;
+        }
+        .all-youtubeclone{
+            display: flex;
+            justify-content: space-between;
+            
+            background-color: black;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  0px;
+        }
+        .sec-youtubeclone{
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  50px;
+        }
+        .third-youtubeclone{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            background-color: black;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  50px;
+        }
+        .fourth-youtubeclone{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            background-color: black;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  50px;
+        }
+        .fifth-youtubeclone{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            background-color: black;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  50px;
+        }
+        .sixth-youtubeclone{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 100px;
+            background-color: black;
+            border-radius: 10px;
+            height: 300px;
+            padding: 80px  50px;
+        }
+        .img-youtube{
+            width: 500px;
+            border: none;
+            margin-left: 30px;
+            border-radius: 20px;
+        }
+        .img-penguin{
+            width: 500px;
+            border: none;
+            border-radius: 20px;
+        }
+        .youtubeclone-note{
+            margin-right: 150px;
+            color: white;
+        }
+        .sec-youtubeclonenote{
+            margin-left: 30px;
+            color: white;
+        }
+        .youtube-clone{
+            font-size: 50px;
+            font-family: "Lilita One", sans-serif;
+            color: rgb(8, 255, 8);
+        }
+        .responsive{
+            font-size: 27px;
+            font-family: "Zilla Slab", serif;
+        }
+        .all-image-penguin{
+            margin-right: 150px;
+        }
+        .get{
+            display: flex;
+            justify-content: center;
+        }
+        .get-in-touch{
+            color: white;
+            font-size: 70px;
+            font-family: "Lilita One", sans-serif;
+            
+        }
+        .message{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .email{
+            height: 50px;
+            background-color: black;
+            width: 600px;
+            border-radius: 5px;
+            border: 1px solid;
+            border-color: rgb(8, 255, 8);
+            font-size: 20px;
+            color: white;
+        }
+        .message-2{
+            width: 600px;
+            border-radius: 5px;
+            border: 1px solid;
+            border-color: rgb(8, 255, 8);
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sub{
+            height: 50px;
+            width: 150px;
+            background-color: rgb(8, 255, 8);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-bottom: 100px;
+        }
+        .sub:hover{
+
+        }
+        .footer{
+            background-color: rgb(44, 43, 43);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        .email-address{
+            display: flex;
+            gap: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .number{
+            color: rgb(8, 255, 8);
+        }
+        .lets-talk{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+        }
+        .building{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .tell{
+            height: 50px;
+            border: none;
+            background-color: rgb(8, 255, 8);
+            border-radius: 10px;
+            color: white;
+            font-weight: 800;
+        }
+        .all-talk{
+            margin-right: 200px;
+        }
+        .reserved{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+
+        }
+        /* =======================
+   LARGE TABLETS / LAPTOPS
+   ======================= */
+@media (max-width: 1024px) {
+    .all-about {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .all-about-me {
+        margin: 0;
+    }
+
+    .imaging {
+        margin: 40px auto 0;
+        width: 400px;
+        height: 400px;
+    }
+
+    .all-youtubeclone,
+    .sec-youtubeclone,
+    .third-youtubeclone,
+    .fourth-youtubeclone,
+    .fifth-youtubeclone {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .youtubeclone-note,
+    .sec-youtubeclonenote {
+        margin: 0;
+    }
+}
+
+/* =======================
+   TABLETS / PHONES
+   ======================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .left {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .web {
+        font-size: 38px;
+    }
+
+    .full-stack {
+        font-size: 22px;
+    }
+
+    .img-youtube,
+    .img-penguin {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .email,
+    .message-2 {
+        width: 100%;
+    }
+
+    .get-in-touch {
+        font-size: 45px;
+        text-align: center;
+    }
+}
+
+/* =======================
+   SMALL PHONES
+   ======================= */
+@media (max-width: 480px) {
+    body {
+        margin-top: 120px;
+    }
+
+    .web {
+        font-size: 30px;
+    }
+
+    .full-stack {
+        font-size: 18px;
+    }
+
+    .project {
+        font-size: 35px;
+    }
+
+    .imaging {
+        width: 280px;
+        height: 280px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .home {
+        width: 100%;
+    }
+}
+
+
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <h1 class="charles">CharlesTech</h1>
+        </div>
+        <div class="left">
+            <a href=""><button class="home">Home</button></a>
+            <a href=""><button class="home">About</button></a>
+            <a href=""><button class="home">Contact</button></a><img src="/portfolio/me.jpeg" alt="" class="image-1">
+        </div>
+    </nav>
+    <section>
+        <div class="all-about">
+            <div class="all-about-me">
+                <p class="hello">Hello, I`m a</p>
+                <h1 class="web">Web Developer</h1>
+                <p class="full-stack">A Full-stack Developer, I create elegant <br>and efficient software solutions that <br>make a difference. Specializing in full-stack <br>development, I bring ideas to life with code.I build <br>interfaces that are not only functional but also <br>delightful to use.</p>
+            </div>
+            <div class="imaging">
+                <img src="/portfolio/segz bg removal.png" alt="" class="my-image">
+            </div>
+        </div>
+        <div class="my-portfolio">
+            <h1 class="project">My projects</h1>
+        </div>
+        <div class="all-youtubeclone">
+            <div>
+                <a href="/youtube project/youtube layout.html"><img src="/portfolio/youtube clone.png" alt="" class="img-youtube"></a>
+            </div>
+            <div class="youtubeclone-note">
+                <h3 class="youtube-clone">Youtube Clone</h3>
+                <p class="responsive">This is a responsive youtube interface done with only HTML and CSS</p>
+            </div>
+        </div>
+        <div class="sec-youtubeclone">
+            <div class="sec-youtubeclonenote">
+                <h3 class="youtube-clone">Penguin</h3>
+                <p class="responsive">This is penguin animation project from FreeCodeCamp and it <br>was done using only HTML and CSS</p>
+            </div>
+            <div class="all-image-penguin">
+                <a href="/FreeCodeCamp/peguin.html"><img src="/portfolio/penguin image.png" alt="" class="img-penguin"></a>
+            </div>
+        </div>
+        <div class="third-youtubeclone">
+            <div>
+                <a href="/Frontend mentor/hdhdhdhd.html"><img src="/portfolio/homepage.png" alt="" class="img-youtube"></a>
+            </div>
+            <div class="youtubeclone-note">
+                <h3 class="youtube-clone">Homepage</h3>
+                <p class="responsive">This is a responsive homepage from Frontend mentor, and it <br>was built with only HTML and CSS</p>
+            </div>
+        </div>
+        <div class="fourth-youtubeclone">
+            <div class="sec-youtubeclonenote">
+                <h3 class="youtube-clone">Extention List</h3>
+                <p class="responsive">This is a responsive extention list from Frontend mentor, and it <br>was built with only HTML and CSS</p>
+            </div>
+            <div class="all-image-penguin">
+                <a href="/Frontend mentor/browser extention manager.html"><img src="/portfolio/extension list.png" alt="" class="img-penguin"></a>
+            </div>
+        </div>
+        <div class="fifth-youtubeclone">
+            <div>
+                <a href="/Frontend mentor/Form FEM.html"><img src="/portfolio/form.png" alt="" class="img-youtube"></a>
+            </div>
+            <div class="youtubeclone-note">
+                <h3 class="youtube-clone">Form</h3>
+                <p class="responsive">This is a responsive form from Frontend mentor, and it <br>was built with only HTML and CSS</p>
+            </div>
+        </div>
+        <div class="fifth-youtubeclone">
+            <div class="sec-youtubeclonenote">
+                <h3 class="youtube-clone">Moniepoint Interface</h3>
+                <p class="responsive">This is a moniepoint homepage section done with HTML, <br>CSS and a minimal of javscript</p>
+            </div>
+            <div class="all-image-penguin">
+                <a href="/FreeCodeCamp/moniepoint.html"><img src="/portfolio/MONIEPOINT.png" alt="" class="img-penguin"></a>
+            </div>
+        </div>
+        <div class="get">
+            <h2 class="get-in-touch">Get in touch</h2>
+        </div>
+        <div class="message">
+            <input type="email" placeholder="Email" class="email"><br>
+            <input type="email" placeholder="Username" class="email"><br>
+            <input type="number" placeholder="Phone" class="email"><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="message-2"></textarea>
+        </div>
+        <div class="submit">
+            <button class="sub">Submit</button>
+        </div>
+    </section>
+    <div class="footer">
+        <div class="all-talk">
+            <h1 class="lets-talk">Let`s talk</h1>
+            <p class="building">Building modern, responsive, and user-friendly web applications.</p>
+            <button class="tell">Tell us about your project</button>
+        </div>
+        <div>
+            <div class="email-address">
+                <h4>Email</h4>
+                <h4 class="number">adekanyeseguncharles@gmail.com</h4>
+            </div>
+            <div class="email-address">
+                <h4>phone</h4>
+                <h4 class="number">(+234)9128327370</h4>
+            </div>
+            <div class="email-address">
+                <h4>Address</h4>
+                <h4 class="number">ilorin, Kwara state, Nigeria
+            </div>
+            <div>
+              <a href="https://facebook.com" target="_blank">📘</a>
+              <a href="https://instagram.com" target="_blank">📸</a>
+              <a href="https://linkedin.com" target="_blank">💼</a>
+              <a href="https://wa.me/2349128327370" target="_blank">💬</a>
+            </div>
+            <div class="reserved">
+              <p>© 2026 charles. All rights reserved.</p>
+            </div>
+        </div>
+</body>
+</html>
