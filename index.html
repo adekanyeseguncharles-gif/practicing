@@ -13,7 +13,7 @@
             margin-top: 85px;
         }
         nav{
-            background: linear-gradient(90deg, rgb(8, 255, 8),  greenyellow);
+            background: linear-gradient(90deg, rgb(8, 255, 8),  white);
             display: flex;
             justify-content: space-between;
             position: fixed;
@@ -79,7 +79,7 @@
             width: 500px;
             margin-left: 200px;
             margin-top: 70px;
-            overflow: hidden;
+            
 
         }
         .hello{
@@ -127,11 +127,16 @@
         .all-youtubeclone{
             display: flex;
             justify-content: space-between;
-            
             background-color: black;
             border-radius: 10px;
             height: 300px;
             padding: 80px  0px;
+            transition: 0.5s;
+        }
+        .all-youtubeclone:hover{
+            transform: translateY(-8px);
+            box-shadow: 2px 2px 2px 2px rgb(8, 255, 8);
+
         }
         .sec-youtubeclone{
             background-color: black;
@@ -417,7 +422,7 @@
         </div>
         <div class="all-youtubeclone">
             <div>
-                <a href="/youtube project/youtube layout.html"><img src="./youtube-clone.png" alt="" class="img-youtube"></a>
+                <a href=""><img src="./youtube-clone.png" alt="" class="img-youtube"></a>
             </div>
             <div class="youtubeclone-note">
                 <h3 class="youtube-clone">Youtube Clone</h3>
@@ -433,7 +438,7 @@
                 <a href="/FreeCodeCamp/peguin.html"><img src="./penguin-image.png" alt="" class="img-penguin"></a>
             </div>
         </div>
-        <div class="third-youtubeclone">
+         <div class="third-youtubeclone">
             <div>
                 <a href="/Frontend mentor/hdhdhdhd.html"><img src="./homepage.png" alt="" class="img-youtube"></a>
             </div>
@@ -442,13 +447,31 @@
                 <p class="responsive">This is a responsive homepage from Frontend mentor, and it <br>was built with only HTML and CSS</p>
             </div>
         </div>
+        <div class="sec-youtubeclone">
+            <div class="sec-youtubeclonenote">
+                <h3 class="youtube-clone">Apple</h3>
+                <p class="responsive">This is an apple website recreated by me <br>using only HTML and CSS</p>
+            </div>
+            <div class="all-image-penguin">
+                <a href="/Apple project/apple3.html"><img src="./Apple.png" alt="" class="img-penguin"></a>
+            </div>
+        </div>
+        <div class="third-youtubeclone">
+            <div>
+                <a href="/Frontend mentor/products list with cart.html"><img src="./desert.png" alt="" class="img-youtube"></a>
+            </div>
+            <div class="youtubeclone-note">
+                <h3 class="youtube-clone">Product list with cart</h3>
+                <p class="responsive">This is product list from Frontend mentor, and it <br>was built with only HTML and CSS</p>
+            </div>
+        </div>
         <div class="fourth-youtubeclone">
             <div class="sec-youtubeclonenote">
                 <h3 class="youtube-clone">Extention List</h3>
                 <p class="responsive">This is a responsive extention list from Frontend mentor, and it <br>was built with only HTML and CSS</p>
             </div>
             <div class="all-image-penguin">
-                <a href="/Frontend mentor/browser extention manager.html"><img src="./extensionlist.png" alt="" class="img-penguin"></a>
+                <a href="/Frontend mentor/browser extention manager"><img src="./extensionlist.png" alt="" class="img-penguin"></a>
             </div>
         </div>
         <div class="fifth-youtubeclone">
@@ -462,11 +485,29 @@
         </div>
         <div class="fifth-youtubeclone">
             <div class="sec-youtubeclonenote">
-                <h3 class="youtube-clone">Moniepoint Interface</h3>
+                <h3 class="youtube-clone"></h3>
                 <p class="responsive">This is a moniepoint homepage section done with HTML, <br>CSS and a minimal of javscript</p>
             </div>
             <div class="all-image-penguin">
-                <a href="/FreeCodeCamp/moniepoint.html"><img src="./MONIEPOINT.png" alt="" class="img-penguin"></a>
+                <a href="/FreeCodeCamp/moniepoint.html"><img src="./MONIEPOIT.png" alt="" class="img-penguin"></a>
+            </div>
+        </div>
+         <div class="third-youtubeclone">
+            <div>
+                <a href="/Frontend mentor/jessica.html"><img src="./jessica.png" alt="" class="img-youtube"></a>
+            </div>
+            <div class="youtubeclone-note">
+                <h3 class="youtube-clone">Jessica`s list</h3>
+                <p class="responsive">This is a Jessica list from Frontend mentor, and it <br>was built with only HTML and CSS</p>
+            </div>
+        </div>
+        <div class="fifth-youtubeclone">
+            <div class="sec-youtubeclonenote">
+                <h3 class="youtube-clone">FAQ</h3>
+                <p class="responsive">This is a frequently asked questions from frontend mentor <br>done with HTML, and tailwind CSS</p>
+            </div>
+            <div class="all-image-penguin">
+                <a href="/Tailwind/faq-accord/faq-accordion-main/index.html"><img src="./Faq.png" alt="" class="img-penguin"></a>
             </div>
         </div>
         <div class="get">
@@ -476,9 +517,7 @@
             <input type="email" placeholder="Email" class="email"><br>
             <input type="email" placeholder="Username" class="email"><br>
             <input type="number" placeholder="Phone" class="email"><br>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="message-2"></textarea>
-        </div>
-        <div class="submit">
+            <textarea placeholder="Message" class="message-2"></textarea>
             <button class="sub">Submit</button>
         </div>
     </section>
@@ -510,6 +549,6 @@
             <div class="reserved">
               <p>© 2026 charles. All rights reserved.</p>
             </div>
-        </div>
+        </div> 
 </body>
 </html>
