@@ -7,472 +7,441 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zilla+Slab:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zilla+Slab:wght@300;400;500;600;700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
 <style>
+
 /* ================= GLOBAL ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-body {
-  background-color: #1E1E2F;
-  color: #F5F5F5;
-  font-family: Inter, sans-serif;
+body{
+background:#1E1E2F;
+color:#F5F5F5;
+font-family:Inter,sans-serif;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+a{
+text-decoration:none;
+color:inherit;
 }
 
 /* ================= NAVBAR ================= */
-nav {
-  background: linear-gradient(90deg,#00D1FF,#F5F5F5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 15px 30px;
-  height: 70px;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+nav{
+background:linear-gradient(90deg,#00D1FF,#F5F5F5);
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+right:0;
+padding:15px 30px;
+height:70px;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
-.charles {
-  font-family: "Lilita One", sans-serif;
-  color: #FF6F61;
-  font-size: 28px;
+.charles{
+font-family:"Lilita One",sans-serif;
+color:#FF6F61;
+font-size:26px;
 }
 
-.left {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+/* Navigation Links */
+.left{
+display:flex;
+gap:25px;
+align-items:center;
 }
 
-.left a {
-  color: #1E1E2F;
+.left a{
+font-weight:600;
+color:#1E1E2F;
+transition:0.3s;
 }
 
-.home-btn {
-  background-color: #00D1FF;
-  border: none;
-  border-radius: 20px;
-  padding: 5px 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.home-btn:hover {
-  background-color: #FF6F61;
-  color: #F5F5F5;
+.left a:hover{
+color:#FF6F61;
 }
 
 /* Hamburger */
-#menu-toggle { display: none; }
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #1E1E2F;
-  margin: 4px 0;
+#menu-toggle{
+display:none;
 }
 
-/* ================= HERO / HOME ================= */
-#home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 100vh;
-  padding: 100px 10%;
-  background: #2A2A40;
-  flex-wrap: wrap;
+.hamburger{
+display:none;
+flex-direction:column;
+cursor:pointer;
 }
 
-.hero-text {
-  max-width: 600px;
+.hamburger span{
+width:25px;
+height:3px;
+background:#1E1E2F;
+margin:4px 0;
+transition:0.3s;
 }
 
-.hero-text p {
-  font-size: 22px;
-  color: #00D1FF;
-  margin-bottom: 15px;
+/* ================= HERO ================= */
+
+#home{
+display:flex;
+justify-content:space-between;
+align-items:center;
+min-height:100vh;
+padding:120px 10%;
+background:#2A2A40;
+flex-wrap:wrap;
 }
 
-.hero-text h1 {
-  font-size: 55px;
-  font-family: "Lilita One", sans-serif;
+.hero-text{
+max-width:600px;
 }
 
-.hero-text h3 {
-  font-size: 24px;
-  font-family: "Zilla Slab", serif;
-  margin-top: 20px;
-  line-height: 1.5;
+.hero-text p{
+font-size:22px;
+color:#00D1FF;
+margin-bottom:15px;
 }
 
-.hero-img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 24px;
-  overflow: hidden;
-  margin-top: 30px;
+.hero-text h1{
+font-size:55px;
+font-family:"Lilita One",sans-serif;
 }
 
-.hero-img img {
-  width: 100%;
-  display: block;
-  border-radius: 24px;
-  transition: transform 0.5s ease;
+.hero-text h3{
+font-size:22px;
+font-family:"Zilla Slab",serif;
+margin-top:20px;
+line-height:1.6;
 }
 
-.hero-img img:hover {
-  transform: scale(1.05);
+.hero-img{
+width:100%;
+max-width:400px;
+border-radius:24px;
+overflow:hidden;
+margin-top:30px;
+}
+
+.hero-img img{
+width:100%;
+border-radius:24px;
+transition:0.5s;
+}
+
+.hero-img img:hover{
+transform:scale(1.05);
 }
 
 /* ================= ABOUT ================= */
-#about {
-  padding: 100px 10%;
-  background: #1E1E2F;
-  text-align: center;
+
+#about{
+padding:100px 10%;
+text-align:center;
+background:#1E1E2F;
 }
 
-#about h2 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 55px;
-  margin-bottom: 40px;
-  color: #00D1FF;
+#about h2{
+font-size:50px;
+font-family:"Lilita One",sans-serif;
+color:#00D1FF;
+margin-bottom:30px;
 }
 
-#about p {
-  font-size: 20px;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.8;
-  color: #F5F5F5;
+#about p{
+max-width:800px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
 }
 
 /* ================= PROJECTS ================= */
-#projects {
-  padding: 100px 10%;
-  background: #2A2A40;
-  text-align: center;
+
+#projects{
+padding:100px 10%;
+background:#2A2A40;
+text-align:center;
 }
 
-#projects h2 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 55px;
-  margin-bottom: 50px;
-  color: #00D1FF;
+#projects h2{
+font-size:50px;
+font-family:"Lilita One",sans-serif;
+color:#00D1FF;
+margin-bottom:50px;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.project-card {
-  background: #1E1E2F;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.project-card{
+background:#1E1E2F;
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
 }
 
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.project-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+transition:0.5s;
 }
 
-.project-card:hover img {
-  transform: scale(1.05);
+.project-card:hover img{
+transform:scale(1.05);
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px #00D1FF;
+.project-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px #00D1FF;
 }
 
-.project-info {
-  padding: 20px;
+.project-info{
+padding:20px;
 }
 
-.project-info h3 {
-  font-family: "Lilita One", sans-serif;
-  color: #00D1FF;
-  margin-bottom: 10px;
+.project-info h3{
+color:#00D1FF;
+font-family:"Lilita One",sans-serif;
+margin-bottom:10px;
 }
 
-.project-info p {
-  font-family: "Zilla Slab", serif;
-  color: #F5F5F5;
-  font-size: 16px;
+.project-info p{
+font-family:"Zilla Slab",serif;
+font-size:15px;
 }
 
-/* ================= CONTACT / GET IN TOUCH ================= */
-#contact {
-  padding: 100px 10%;
-  background: #1E1E2F;
-  text-align: center;
+/* ================= CONTACT ================= */
+
+#contact{
+padding:100px 10%;
+text-align:center;
+background:#1E1E2F;
 }
 
-#get-in-touch {
-  font-size: 55px;
-  font-family: "Lilita One", sans-serif;
-  margin-bottom: 50px;
-  color: #00D1FF;
+#contact h2{
+font-size:50px;
+font-family:"Lilita One",sans-serif;
+color:#00D1FF;
+margin-bottom:40px;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+.contact-form{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
 }
 
 .contact-form input,
-.contact-form textarea {
-  width: 600px;
-  max-width: 90%;
-  padding: 15px;
-  border-radius: 6px;
-  border: 1px solid #00D1FF;
-  background: #2A2A40;
-  color: #F5F5F5;
-  font-size: 16px;
+.contact-form textarea{
+width:600px;
+max-width:90%;
+padding:15px;
+border-radius:6px;
+border:1px solid #00D1FF;
+background:#2A2A40;
+color:#F5F5F5;
+font-size:16px;
 }
 
-.contact-form button {
-  width: 160px;
-  height: 50px;
-  border-radius: 25px;
-  border: none;
-  background: #00D1FF;
-  color: #1E1E2F;
-  font-size: 18px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.contact-form button{
+width:160px;
+height:50px;
+border-radius:25px;
+border:none;
+background:#00D1FF;
+color:#1E1E2F;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
 }
 
-.contact-form button:hover {
-  background: #FF6F61;
-  color: #F5F5F5;
+.contact-form button:hover{
+background:#FF6F61;
+color:#F5F5F5;
 }
 
 /* ================= FOOTER ================= */
-footer {
-  background: #2A2A40;
-  padding: 60px 10%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
+
+footer{
+background:#2A2A40;
+padding:60px 10%;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:40px;
 }
 
-footer .footer-left h3 {
-  font-family: "Lilita One", sans-serif;
-  font-size: 40px;
-  margin-bottom: 20px;
-  color: #00D1FF;
+footer h3{
+font-family:"Lilita One",sans-serif;
+color:#00D1FF;
+font-size:35px;
+margin-bottom:15px;
 }
 
-footer .footer-left p {
-  max-width: 500px;
-  line-height: 1.6;
+footer p{
+line-height:1.6;
 }
 
-footer .footer-left button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background: #00D1FF;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+footer .social{
+margin-top:15px;
+font-size:24px;
 }
 
-footer .footer-left button:hover {
-  background: #FF6F61;
-  color: #F5F5F5;
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.hamburger{
+display:flex;
 }
 
-footer .footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+.left{
+position:absolute;
+top:70px;
+right:20px;
+background:#2A2A40;
+flex-direction:column;
+width:220px;
+padding:20px;
+display:none;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+gap:20px;
 }
 
-footer .footer-right h4 {
-  color: #00D1FF;
+.left a{
+color:#F5F5F5;
 }
 
-footer .footer-right a {
-  font-size: 24px;
+#menu-toggle:checked ~ .left{
+display:flex;
 }
 
-/* ================= MEDIA ================= */
-@media(max-width:768px) {
-  nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 20px;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .hero-img, .project-card img {
-    height: auto;
-  }
-
-  .projects-grid {
-    gap: 20px;
-  }
-
-  #home, #about, #projects, #contact {
-    padding: 80px 5%;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
+#home{
+flex-direction:column;
+text-align:center;
 }
+
+footer{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <nav>
 <h1 class="charles">CharlesTech</h1>
+
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</label>
+
 <div class="left">
-  <a href="#home"><button class="home-btn">Home</button></a>
-  <a href="#about"><button class="home-btn">About</button></a>
-  <a href="#projects"><button class="home-btn">Projects</button></a>
-  <a href="#contact"><button class="home-btn">Contact</button></a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
-<!-- ================= HERO / HOME ================= -->
+<!-- HERO -->
 <section id="home">
-  <div class="hero-text">
-    <p>Hello, I'm a</p>
-    <h1>Web Developer</h1>
-    <h3>A Full-stack Developer creating modern, responsive web applications. I bring ideas to life with clean and efficient code.</h3>
-  </div>
-  <div class="hero-img">
-    <img src="./segz.png" alt="Charles Image">
-  </div>
+<div class="hero-text">
+<p>Hello, I'm a</p>
+<h1>Web Developer</h1>
+<h3>A Full-stack Developer creating modern, responsive web applications that bring ideas to life.</h3>
+</div>
+<div class="hero-img">
+<img src="./segz.png" alt="Charles">
+</div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <section id="about">
-  <h2>About Me</h2>
-  <p>I specialize in full-stack development, crafting elegant and efficient software solutions. My passion is transforming ideas into functional, user-friendly websites and applications that make a difference.</p>
+<h2>About Me</h2>
+<p>I specialize in full-stack development, crafting elegant and efficient solutions. My goal is to build clean, user-friendly web applications that create real impact.</p>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 <section id="projects">
-  <h2>My Projects</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-      <a href="/youtube project/youtube layout.html"><img src="./youtube-clone.png" alt="Youtube Clone"></a>
-      <div class="project-info">
-        <h3>Youtube Clone</h3>
-        <p>Responsive Youtube interface built with HTML & CSS</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <a href="https://penguin-teal-six.vercel.app/"><img src="./penguin-image.png" alt="Penguin Animation"></a>
-      <div class="project-info">
-        <h3>Penguin</h3>
-        <p>Fun penguin animation project using HTML & CSS</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <a href="https://news-homepage-six-gamma.vercel.app/"><img src="./homepage.png" alt="Homepage Project"></a>
-      <div class="project-info">
-        <h3>Homepage</h3>
-        <p>Responsive homepage built from Frontend Mentor challenge</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <a href="/Apple project/apple3.html"><img src="./Apple.png" alt="Apple Project"></a>
-      <div class="project-info">
-        <h3>Apple</h3>
-        <p>Apple website recreation with HTML & CSS</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <a href="https://jessica-ecru.vercel.app/"><img src="./jessica.png" alt="Jessica List"></a>
-      <div class="project-info">
-        <h3>Jessica List</h3>
-        <p>List recreation project using HTML & CSS</p>
-      </div>
-    </div>
-    <div class="project-card">
-      <a href="https://browser-extension-manager-q71enlwsi.vercel.app/"><img src="./extensionlist.png" alt="Extension Manager"></a>
-      <div class="project-info">
-        <h3>Extension Manager</h3>
-        <p>Browser extension management interface</p>
-      </div>
-    </div>
-  </div>
+<h2>My Projects</h2>
+<div class="projects-grid">
+
+<div class="project-card">
+<img src="./youtube-clone.png">
+<div class="project-info">
+<h3>Youtube Clone</h3>
+<p>Responsive interface built with HTML & CSS.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="./penguin-image.png">
+<div class="project-info">
+<h3>Penguin</h3>
+<p>Fun animation project from FreeCodeCamp.</p>
+</div>
+</div>
+
+<div class="project-card">
+<img src="./homepage.png">
+<div class="project-info">
+<h3>Homepage</h3>
+<p>Frontend Mentor responsive challenge.</p>
+</div>
+</div>
+
+</div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact">
-  <h2 id="get-in-touch">Get in Touch</h2>
-  <div class="contact-form">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Username">
-    <input type="number" placeholder="Phone">
-    <textarea placeholder="Message" rows="6"></textarea>
-    <button>Submit</button>
-  </div>
+<h2>Get In Touch</h2>
+<div class="contact-form">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Username">
+<input type="number" placeholder="Phone">
+<textarea rows="6" placeholder="Message"></textarea>
+<button>Submit</button>
+</div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-left">
-    <h3>Let's Talk</h3>
-    <p>Building modern, responsive, and user-friendly web applications. Feel free to reach out about projects or collaboration!</p>
-    <button>Tell us about your project</button>
-  </div>
-  <div class="footer-right">
-    <h4>Email: adekanyeseguncharles@gmail.com</h4>
-    <h4>Phone: (+234) 9128327370</h4>
-    <h4>Address: Ilorin, Kwara State, Nigeria</h4>
-    <div>
-      <a href="https://facebook.com" target="_blank">📘</a>
-      <a href="https://instagram.com" target="_blank">📸</a>
-      <a href="https://linkedin.com" target="_blank">💼</a>
-      <a href="https://wa.me/2349128327370" target="_blank">💬</a>
-    </div>
-    <p style="margin-top:10px;">© 2026 Charles. All rights reserved.</p>
-  </div>
+<div>
+<h3>Let's Talk</h3>
+<p>Building modern, responsive, and user-friendly web applications.</p>
+</div>
+<div>
+<p>Email: adekanyeseguncharles@gmail.com</p>
+<p>Phone: (+234) 9128327370</p>
+<p>Ilorin, Kwara State, Nigeria</p>
+<div class="social">📘 📸 💼 💬</div>
+<p style="margin-top:10px;">© 2026 Charles. All rights reserved.</p>
+</div>
 </footer>
 
 </body>
