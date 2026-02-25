@@ -7,575 +7,473 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Changa+One:ital@0;1&family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&family=Lilita+One&family=Lobster&family=Montserrat:wght@100..900&family=Noto+Sans:wght@100..900&family=Roboto:wght@100..900&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Zilla+Slab:wght@300;400;500;600;700&family=Inter:wght@100..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior: smooth;
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-body{
-background-color:#1E1E2F;
-color:#F5F5F5;
-font-family:Inter,sans-serif;
+body {
+  background-color: #1E1E2F;
+  color: #F5F5F5;
+  font-family: Inter, sans-serif;
 }
 
-nav{
-background:linear-gradient(90deg,#00D1FF,#F5F5F5);
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:fixed;
-top:0;
-right:0;
-left:0;
-padding:15px 30px;
-height:70px;
-z-index:1000;
-box-shadow:0 4px 15px rgba(0,0,0,0.2);
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.charles{
-font-family:"Lilita One",sans-serif;
-color:#FF6F61;
+/* ================= NAVBAR ================= */
+nav {
+  background: linear-gradient(90deg,#00D1FF,#F5F5F5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  height: 70px;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.left{
-display:flex;
-gap:25px;
-align-items:center;
+.charles {
+  font-family: "Lilita One", sans-serif;
+  color: #FF6F61;
+  font-size: 28px;
 }
 
-#menu-toggle{
-display:none;
+.left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-.hamburger{
-display:none;
-flex-direction:column;
-cursor:pointer;
+.left a {
+  color: #1E1E2F;
 }
 
-.hamburger span{
-width:25px;
-height:3px;
-background:#1E1E2F;
-margin:4px 0;
+.home-btn {
+  background-color: #00D1FF;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.image-1{
-width:45px;
-height:45px;
-border-radius:50%;
+.home-btn:hover {
+  background-color: #FF6F61;
+  color: #F5F5F5;
 }
 
-.home{
-height:32px;
-width:80px;
-background-color:#00D1FF;
-border:none;
-border-radius:20px;
-cursor:pointer;
-font-weight:600;
-font-family:"Caveat",cursive;
-transition:0.3s;
-color:#1E1E2F;
+/* Hamburger */
+#menu-toggle { display: none; }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1E1E2F;
+  margin: 4px 0;
 }
 
-.home:hover{
-background:#FF6F61;
-color:#F5F5F5;
+/* ================= HERO / HOME ================= */
+#home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: #2A2A40;
+  flex-wrap: wrap;
 }
 
-a{
-text-decoration:none;
+.hero-text {
+  max-width: 600px;
 }
 
-/* ================= HERO ================= */
-
-.all-about{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#2A2A40;
-min-height:100vh;
-padding:80px 10%;
-animation:fadeIn 1.2s ease;
+.hero-text p {
+  font-size: 22px;
+  color: #00D1FF;
+  margin-bottom: 15px;
 }
 
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+.hero-text h1 {
+  font-size: 55px;
+  font-family: "Lilita One", sans-serif;
 }
 
-.hello{
-color:#00D1FF;
-font-size:22px;
-margin-bottom:30px;
+.hero-text h3 {
+  font-size: 24px;
+  font-family: "Zilla Slab", serif;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
-.web{
-font-size:55px;
-font-family:"Lilita One",sans-serif;
+.hero-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-top: 30px;
 }
 
-.full-stack{
-font-size:26px;
-font-family:"Zilla Slab",serif;
-margin-top:20px;
+.hero-img img {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  transition: transform 0.5s ease;
 }
 
-.imaging{
-width:100%;
-max-width:400px;
-margin:70px auto 0;
-border-radius:24px;
-overflow:hidden;
+.hero-img img:hover {
+  transform: scale(1.05);
 }
 
-.my-image{
-width:100%;
-display:block;
-border-radius:24px;
-transition:transform 0.5s ease;
+/* ================= ABOUT ================= */
+#about {
+  padding: 100px 10%;
+  background: #1E1E2F;
+  text-align: center;
 }
 
-.imaging:hover .my-image{
-transform:scale(1.05);
+#about h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 55px;
+  margin-bottom: 40px;
+  color: #00D1FF;
+}
+
+#about p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+  color: #F5F5F5;
 }
 
 /* ================= PROJECTS ================= */
-
-.project{
-font-size:55px;
-font-family:"Lilita One",sans-serif;
-margin:60px 0;
-text-align:center;
+#projects {
+  padding: 100px 10%;
+  background: #2A2A40;
+  text-align: center;
 }
 
-.all-youtubeclone,
-.sec-youtubeclone,
-.third-youtubeclone,
-.fourth-youtubeclone,
-.fifth-youtubeclone{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#2A2A40;
-border-radius:10px;
-padding:60px;
-margin:60px 10%;
-gap:40px;
-transition:0.4s;
+#projects h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 55px;
+  margin-bottom: 50px;
+  color: #00D1FF;
 }
 
-.all-youtubeclone:hover,
-.sec-youtubeclone:hover,
-.third-youtubeclone:hover,
-.fourth-youtubeclone:hover,
-.fifth-youtubeclone:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px #00D1FF;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.img-youtube,
-.img-penguin{
-width:450px;
-max-width:100%;
-height:auto;
-border-radius:20px;
+.project-card {
+  background: #1E1E2F;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.youtubeclone-note,
-.sec-youtubeclonenote{
-max-width:500px;
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.youtube-clone{
-font-size:45px;
-font-family:"Lilita One",sans-serif;
-color:#00D1FF;
+.project-card:hover img {
+  transform: scale(1.05);
 }
 
-.responsive{
-font-size:24px;
-font-family:"Zilla Slab",serif;
-margin-top:15px;
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #00D1FF;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  font-family: "Lilita One", sans-serif;
+  color: #00D1FF;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-family: "Zilla Slab", serif;
+  color: #F5F5F5;
+  font-size: 16px;
+}
+
+/* ================= CONTACT / GET IN TOUCH ================= */
+#contact {
+  padding: 100px 10%;
+  background: #1E1E2F;
+  text-align: center;
+}
+
+#get-in-touch {
+  font-size: 55px;
+  font-family: "Lilita One", sans-serif;
+  margin-bottom: 50px;
+  color: #00D1FF;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 600px;
+  max-width: 90%;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #00D1FF;
+  background: #2A2A40;
+  color: #F5F5F5;
+  font-size: 16px;
+}
+
+.contact-form button {
+  width: 160px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background: #00D1FF;
+  color: #1E1E2F;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #FF6F61;
+  color: #F5F5F5;
 }
 
 /* ================= FOOTER ================= */
-
-.footer{
-background:#2A2A40;
-display:flex;
-justify-content:space-between;
-padding:80px 10%;
-flex-wrap:wrap;
-gap:40px;
+footer {
+  background: #2A2A40;
+  padding: 60px 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.lets-talk{
-font-size:40px;
-font-weight:800;
+footer .footer-left h3 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #00D1FF;
 }
 
-.building{
-margin:20px 0;
+footer .footer-left p {
+  max-width: 500px;
+  line-height: 1.6;
 }
 
-.tell{
-height:50px;
-background:#00D1FF;
-border:none;
-border-radius:10px;
-padding:0 20px;
-color:#1E1E2F;
-font-weight:800;
-cursor:pointer;
-transition:0.3s;
+footer .footer-left button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #00D1FF;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.tell:hover{
-background:#FF6F61;
-color:#F5F5F5;
+footer .footer-left button:hover {
+  background: #FF6F61;
+  color: #F5F5F5;
 }
 
-.email-address{
-display:flex;
-gap:20px;
-margin-bottom:10px;
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.number{
-color:#00D1FF;
+footer .footer-right h4 {
+  color: #00D1FF;
 }
 
-.reserved{
-margin-top:20px;
-font-weight:800;
+footer .footer-right a {
+  font-size: 24px;
 }
 
-/* ================= GET IN TOUCH / CONTACT FORM ================= */
+/* ================= MEDIA ================= */
+@media(max-width:768px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
 
-.get-in-touch{
-    font-size:65px;
-    text-align:center;
-    margin-top:100px;
-    font-family:"Lilita One",sans-serif;
+  .hamburger {
+    display: flex;
+  }
+
+  .hero-img, .project-card img {
+    height: auto;
+  }
+
+  .projects-grid {
+    gap: 20px;
+  }
+
+  #home, #about, #projects, #contact {
+    padding: 80px 5%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
-
-.message{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    margin-top:40px;
-}
-
-.email,
-.message-2{
-    width:600px;
-    max-width:90%;
-    background:#2A2A40;
-    border:1px solid #00D1FF;
-    color:#F5F5F5;
-    font-size:18px;
-    padding:15px;
-    border-radius:6px;
-    margin-bottom:20px;
-}
-
-.sub{
-    height:50px;
-    width:160px;
-    background-color:#00D1FF;
-    border:none;
-    border-radius:25px;
-    cursor:pointer;
-    font-size:20px;
-    transition:0.3s;
-    color:#1E1E2F;
-    font-weight:600;
-}
-
-.sub:hover{
-    background:#FF6F61;
-    color:#F5F5F5;
-    border:1px solid #FF6F61;
-}
-
-
-
-
-/* ================= MOBILE FIXES ================= */
-
-@media(max-width:1024px){
-
-.all-about{
-flex-direction:column;
-text-align:center;
-}
-
-.all-youtubeclone,
-.sec-youtubeclone,
-.third-youtubeclone,
-.fourth-youtubeclone,
-.fifth-youtubeclone{
-flex-direction:column;
-text-align:center;
-}
-
-}
-
-@media(max-width:768px){
-
-/* FIX NAV DROPDOWN */
-
-.left{
-position:absolute;
-top:70px;
-right:20px;
-background:#2A2A40;
-flex-direction:column;
-width:220px;
-padding:20px;
-display:none;
-border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
-gap:15px;
-}
-
-.left a{
-width:100%;
-}
-
-.home{
-width:100%;
-}
-
-#menu-toggle:checked ~ .left{
-display:flex;
-}
-
-.hamburger{
-display:flex;
-}
-
-/* FIX IMAGES */
-
-.img-youtube,
-.img-penguin{
-width:100%;
-max-width:350px;
-}
-
-/* FIX SPACING FLOATING ISSUE */
-
-.all-youtubeclone,
-.sec-youtubeclone,
-.third-youtubeclone,
-.fourth-youtubeclone,
-.fifth-youtubeclone{
-padding:30px;
-margin:30px 5%;
-}
-
-.web{
-font-size:40px;
-}
-
-.get-in-touch{
-font-size:40px;
-}
-
-.footer{
-flex-direction:column;
-text-align:center;
-padding:60px 5%;
-}
-
-
-.message-2{
-    min-height:120px;
-}
-
-
-}
-
 </style>
-
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <nav>
 <h1 class="charles">CharlesTech</h1>
-
-<input type="checkbox" id="menu-toggle">
-<label for="menu-toggle" class="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</label>
-
 <div class="left">
-<a href="#"><button class="home">Home</button></a>
-<a href="#"><button class="home">About</button></a>
-<a href="#"><button class="home">Contact</button></a>
-<img src="./segz.png" class="image-1">
+  <a href="#home"><button class="home-btn">Home</button></a>
+  <a href="#about"><button class="home-btn">About</button></a>
+  <a href="#projects"><button class="home-btn">Projects</button></a>
+  <a href="#contact"><button class="home-btn">Contact</button></a>
 </div>
 </nav>
 
-<section class="all-about">
-<div>
-<p class="hello">Hello, I'm a</p>
-<h1 class="web">Web Developer</h1>
-<p class="full-stack">
-A Full-stack Developer, I create elegant and efficient software solutions that make a difference.
-Specializing in full-stack development, I bring ideas to life with code.
-</p>
-</div>
-<div class="imaging">
-<img src="./segz.png" class="my-image">
-</div>
+<!-- ================= HERO / HOME ================= -->
+<section id="home">
+  <div class="hero-text">
+    <p>Hello, I'm a</p>
+    <h1>Web Developer</h1>
+    <h3>A Full-stack Developer creating modern, responsive web applications. I bring ideas to life with clean and efficient code.</h3>
+  </div>
+  <div class="hero-img">
+    <img src="./segz.png" alt="Charles Image">
+  </div>
 </section>
 
-<h1 class="project">My Projects</h1>
-<div class="all-youtubeclone">
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I specialize in full-stack development, crafting elegant and efficient software solutions. My passion is transforming ideas into functional, user-friendly websites and applications that make a difference.</p>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2>My Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <a href="/youtube project/youtube layout.html"><img src="./youtube-clone.png" alt="Youtube Clone"></a>
+      <div class="project-info">
+        <h3>Youtube Clone</h3>
+        <p>Responsive Youtube interface built with HTML & CSS</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <a href="https://penguin-teal-six.vercel.app/"><img src="./penguin-image.png" alt="Penguin Animation"></a>
+      <div class="project-info">
+        <h3>Penguin</h3>
+        <p>Fun penguin animation project using HTML & CSS</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <a href="https://news-homepage-six-gamma.vercel.app/"><img src="./homepage.png" alt="Homepage Project"></a>
+      <div class="project-info">
+        <h3>Homepage</h3>
+        <p>Responsive homepage built from Frontend Mentor challenge</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <a href="/Apple project/apple3.html"><img src="./Apple.png" alt="Apple Project"></a>
+      <div class="project-info">
+        <h3>Apple</h3>
+        <p>Apple website recreation with HTML & CSS</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <a href="https://jessica-ecru.vercel.app/"><img src="./jessica.png" alt="Jessica List"></a>
+      <div class="project-info">
+        <h3>Jessica List</h3>
+        <p>List recreation project using HTML & CSS</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <a href="https://browser-extension-manager-q71enlwsi.vercel.app/"><img src="./extensionlist.png" alt="Extension Manager"></a>
+      <div class="project-info">
+        <h3>Extension Manager</h3>
+        <p>Browser extension management interface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2 id="get-in-touch">Get in Touch</h2>
+  <div class="contact-form">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Username">
+    <input type="number" placeholder="Phone">
+    <textarea placeholder="Message" rows="6"></textarea>
+    <button>Submit</button>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-left">
+    <h3>Let's Talk</h3>
+    <p>Building modern, responsive, and user-friendly web applications. Feel free to reach out about projects or collaboration!</p>
+    <button>Tell us about your project</button>
+  </div>
+  <div class="footer-right">
+    <h4>Email: adekanyeseguncharles@gmail.com</h4>
+    <h4>Phone: (+234) 9128327370</h4>
+    <h4>Address: Ilorin, Kwara State, Nigeria</h4>
     <div>
-        <a href="/youtube project/youtube layout.html"><img src="./youtube-clone.png" class="img-youtube"></a>
+      <a href="https://facebook.com" target="_blank">📘</a>
+      <a href="https://instagram.com" target="_blank">📸</a>
+      <a href="https://linkedin.com" target="_blank">💼</a>
+      <a href="https://wa.me/2349128327370" target="_blank">💬</a>
     </div>
-    <div class="youtubeclone-note">
-        <h3 class="youtube-clone">Youtube Clone</h3>
-        <p class="responsive">
-            This is a responsive youtube interface done with only HTML and CSS
-        </p>
-    </div>
-</div>
-
-<div class="sec-youtubeclone">
-    <div class="sec-youtubeclonenote">
-        <h3 class="youtube-clone">Penguin</h3>
-        <p class="responsive">
-            This is penguin animation project from FreeCodeCamp built using HTML and CSS
-        </p>
-    </div>
-    <div>
-        <a href="https://penguin-teal-six.vercel.app/"><img src="./penguin-image.png" class="img-penguin"></a>
-    </div>
-</div>
-
-<div class="third-youtubeclone">
-    <div>
-        <a href="https://news-homepage-six-gamma.vercel.app/"><img src="./homepage.png" class="img-youtube"></a>
-    </div>
-    <div class="youtubeclone-note">
-        <h3 class="youtube-clone">Homepage</h3>
-        <p class="responsive">
-            Responsive homepage from Frontend Mentor built with HTML and CSS
-        </p>
-    </div>
-</div>
-
-<div class="fourth-youtubeclone">
-    <div class="sec-youtubeclonenote">
-        <h3 class="youtube-clone">Apple</h3>
-        <p class="responsive">
-            Apple website recreation built using only HTML and CSS
-        </p>
-    </div>
-    <div>
-        <a href="/Apple project/apple3.html"><img src="./Apple.png" class="img-penguin"></a>
-    </div>
-</div>
-
-<div class="fifth-youtubeclone">
-    <div>
-        <a href="https://product-list-fawn-two.vercel.app/"><img src="./desert.png" class="img-youtube"></a>
-    </div>
-    <div class="youtubeclone-note">
-        <h3 class="youtube-clone">Product List</h3>
-        <p class="responsive">
-            Product list with cart built from Frontend Mentor challenge
-        </p>
-    </div>
-</div>
-
-<div class="fourth-youtubeclone">
-    <div class="sec-youtubeclonenote">
-        <h3 class="youtube-clone">Jessica list</h3>
-        <p class="responsive">
-            Jessica list recreation built using only HTML and CSS
-        </p>
-    </div>
-    <div>
-        <a href="https://jessica-ecru.vercel.app/"><img src="./jessica.png" class="img-penguin"></a>
-    </div>
-</div>
-
-<div class="fifth-youtubeclone">
-    <div>
-        <a href="https://browser-extension-manager-q71enlwsi.vercel.app/"><img src="./extensionlist.png" class="img-youtube"></a>
-    </div>
-    <div class="youtubeclone-note">
-        <h3 class="youtube-clone">Extension manager</h3>
-        <p class="responsive">
-            Extension manager built from Frontend Mentor challenge
-        </p>
-    </div>
-</div>
-
-<h2 class="get-in-touch">Get in touch</h2>
-
-<div class="message">
-    <input type="email" placeholder="Email" class="email">
-    <input type="text" placeholder="Username" class="email">
-    <input type="number" placeholder="Phone" class="email">
-    <textarea placeholder="Message" class="message-2"></textarea>
-    <button class="sub">Submit</button>
-</div>
-
-<div class="footer">
-    <div>
-        <h1 class="lets-talk">Let's talk</h1>
-        <p class="building">
-            Building modern, responsive, and user-friendly web applications.
-        </p>
-        <button class="tell">Tell us about your project</button>
-    </div>
-
-    <div>
-        <div class="email-address">
-            <h4>Email</h4>
-            <h4 class="number">adekanyeseguncharles@gmail.com</h4>
-        </div>
-
-        <div class="email-address">
-            <h4>Phone</h4>
-            <h4 class="number">(+234) 9128327370</h4>
-        </div>
-
-        <div class="email-address">
-            <h4>Address</h4>
-            <h4 class="number">Ilorin, Kwara State, Nigeria</h4>
-        </div>
-
-        <div style="margin-top:15px; font-size:24px;">
-            <a href="https://facebook.com" target="_blank">📘</a>
-            <a href="https://instagram.com" target="_blank">📸</a>
-            <a href="https://linkedin.com" target="_blank">💼</a>
-            <a href="https://wa.me/2349128327370" target="_blank">💬</a>
-        </div>
-
-        <div class="reserved">
-            <p>© 2026 Charles. All rights reserved.</p>
-        </div>
-    </div>
-</div>
+    <p style="margin-top:10px;">© 2026 Charles. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
